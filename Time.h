@@ -12,6 +12,12 @@ private:
 public:
     Time();
 
+    Time(int h, int m, int s);
+    Time(const std::string& timeStr);
+    Time(long totalSeconds);
+    Time(const Time& otherTime);
+    ~Time();
+
     void Init(int h, int m, int s);
     void Init(const std::string& timeStr);
     void Init(long totalSeconds);

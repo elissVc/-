@@ -22,6 +22,25 @@ Time::Time() {
     Init(0, 0, 0);
 }
 
+Time::Time(int h, int m, int s) {
+    Init(h, m, s);
+}
+
+Time::Time(const std::string& timeStr) {
+    Init(timeStr);
+}
+
+Time::Time(long totalSeconds) {
+    Init(totalSeconds);
+}
+
+Time::Time(const Time& otherTime) {
+    Init(otherTime);
+}
+
+Time::~Time() {
+}
+
 void Time::Init(int h, int m, int s) {
     hours = h;
     minutes = m;
