@@ -120,3 +120,23 @@ int Time::toMinutesRounded() const {
     }
     return totalMins;
 }
+
+Time Time::operator+(long s) const {
+    Time result(*this);
+    result.addSeconds(s);
+    return result;
+}
+
+Time Time::operator-(long s) const {
+    Time result(*this);
+    result.subtractSeconds(s);
+    return result;
+}
+
+bool Time::operator==(const Time& other) const {
+    return this->compare(other) == 0;
+}
+
+bool Time::operator>(const Time& other) const {
+    return this->compare(other) > 0;
+}

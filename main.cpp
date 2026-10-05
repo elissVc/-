@@ -37,7 +37,7 @@ int main() {
         case 2:
             cout << "Скільки секунд відняти? ";
             cin >> secs;
-            t1.subtractSeconds(secs);
+            t1 = t1 - secs;
             cout << " Новий час: "; t1.Display();
             break;
         case 3:
@@ -54,16 +54,16 @@ int main() {
             cout << "Різниця: " << t1.differenceInSeconds(t2) << " секунд(и)." << endl;
 
             int cmp = t1.compare(t2);
-            if (cmp > 0) cout << "Висновок: Перший час більший за другий.\n";
-            else if (cmp < 0) cout << "Висновок: Перший час менший за другий.\n";
-            else cout << "Висновок: Час однаковий.\n";
+            if (t1 > t2) cout << "Перший час більший за другий.\n";
+            else if (t1 == t2) cout << "Час однаковий.\n";
+            else cout << "Перший час менший за другий.\n";
             break;
         }
         case 0:
             cout << "Завершення роботи\n";
             break;
         default:
-            cout << "Помилка: Спробуйте ще раз.\n";
+            cout << "Помилка, Спробуйте ще раз.\n";
         }
     } while (choice != 0);
 

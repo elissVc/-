@@ -18,6 +18,11 @@ public:
     Time(const Time& otherTime);
     ~Time();
 
+    Time operator+(long s) const;
+    Time operator-(long s) const;
+    bool operator==(const Time& other) const;
+    bool operator>(const Time& other) const;
+
     void Init(int h, int m, int s);
     void Init(const std::string& timeStr);
     void Init(long totalSeconds);
